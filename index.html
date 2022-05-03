@@ -5,333 +5,420 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bgprimary: '#ECE7E4',
-                        logocolor: '#FFBF84',
-                        bgsecondary: '#797474',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.4/dist/flowbite.min.css" />
+    <link rel="shortcut icon" href="./img/truckico.png" type="image/x-icon">
+    <script src="https://unpkg.com/flowbite@1.4.4/dist/flowbite.js"></script>
+    <title>Protein&Energy Co.</title>
 </head>
 
-<body class="bg-bgprimary">
-    <nav class="bg-white shadow">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-24">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <img class="block lg:hidden h-16 w-auto" src="./img/logo.png" alt="Workflow">
-                        <img class="hidden lg:block h-16 w-auto " src="./img/logo.png" alt="Workflow">
-                    </div>
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-logocolor inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium">
-                            Projects </a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-logocolor inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium">
-                            About </a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-logocolor inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium">
-                            Features </a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-logocolor inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium">
-                            Products </a>
-                        <a href="#"
-                            class="border-transparent text-gray-500 hover:border-gray-300 hover:text-logocolor inline-flex items-center px-1 pt-1 border-b-2 text-lg font-medium">
-                            Team </a>
+<body>
+    <!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+    <div class="bg-white">
+        <nav class="bg-white border-gray-200 px-2 sm:px-4  rounded mb-4 shadow-lg py-4">
+            <div class="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="#" class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                    </svg>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap ">Protein&Energy</span>
+                </a>
+                <!-- <button data-collapse-toggle="mobile-menu" type="button"
+                    class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button> -->
+                <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+                    
+                </div>
+            </div>
+        </nav>
+
+
+        <main>
+            <!-- Hero section -->
+            <div class="relative">
+                <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
+                <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+                        <div class="absolute inset-0">
+                            <img class="h-full w-full object-cover" src="./img/cowseating.jpg"
+                                alt="People working on laptops">
+                            <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-500 mix-blend-multiply">
+                            </div>
+                        </div>
+                        <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+                            <h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                                <span class="block text-white">Protein&Energy LLC.</span>
+                                <span class="block text-indigo-200">all in time</span>
+                            </h1>
+                            <p
+                                class="mt-6 rounded-xl p-6 max-w-lg mx-auto text-center text-xl bg-white bg-opacity-40 text-white font-semibold sm:max-w-3xl">
+                                LLC “Protein Energy” is trading and production company operating in the field of
+                                alternative energy and agro-industrial complex of Ukraine with a high-developed logistic
+                                complex. The basis of all the goods produced and offered by the company are only organic
+                                products that carry the highest value in the places of their application in accordance
+                                with quality standards.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="-mr-2 flex items-center sm:hidden">
-                    <!-- Mobile menu button -->
-                    <button type="button"
-                        class="mobile-menu-button inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="block h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                        <svg class="hidden h-12 w-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
+            </div>
+            <!-- Alternating Feature Sections -->
+            <div class="relative pt-16 pb-32 overflow-hidden">
+                <div aria-hidden="true" class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-gray-100"></div>
+                <div class="relative">
+                    <div
+                        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                            <div>
+                                <div>
+                                    <span
+                                        class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600">
+                                        <!-- Heroicon name: outline/inbox -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+                                            height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF">
+                                            <g>
+                                                <rect fill="none" height="24" width="24" />
+                                            </g>
+                                            <g>
+                                                <g>
+                                                    <path
+                                                        d="M9,13.05C9,14.68,10.34,16,12,16s3-1.32,3-2.95c0-1.31-0.53-1.69-3-4.55C9.52,11.38,9,11.75,9,13.05z" />
+                                                    <path
+                                                        d="M20,13c0.55,0,1-0.45,1-1s-0.45-1-1-1h-1V5h1c0.55,0,1-0.45,1-1s-0.45-1-1-1H4C3.45,3,3,3.45,3,4s0.45,1,1,1h1v6H4 c-0.55,0-1,0.45-1,1s0.45,1,1,1h1v6H4c-0.55,0-1,0.45-1,1s0.45,1,1,1h16c0.55,0,1-0.45,1-1s-0.45-1-1-1h-1v-6H20z M17,19H7v-6 c0.55,0,1-0.45,1-1s-0.45-1-1-1V5h10v6c-0.55,0-1,0.45-1,1s0.45,1,1,1V19z" />
+                                                </g>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-6">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Oil extracting</h2>
+                                    <p class="mt-4 text-lg text-gray-500">Production and extraction of the highest
+                                        quality oil, with state quality certificates. Soybean, rapeseed or sunflower oil
+                                        for your needs. Cooperating with us you get only the highest quality products
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="mt-8 border-t border-gray-200 pt-6">
+                                <blockquote>
+                                    <div>
+                                        <p class="text-base text-gray-500">&ldquo;In 2021, 10,000 tons of oil were
+                                            produced&rdquo;</p>
+                                    </div>
+                                    <footer class="mt-3">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="./img/soya.png" alt="">
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="./img/sunflower.png" alt="">
+                                            </div>
+                                            <div class="flex-shrink-0">
+                                                <img class="h-10 w-10 rounded-full" src="./img/rapeseed.png" alt="">
+                                            </div>
+
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0">
+                            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://images.unsplash.com/photo-1587637970934-a09453665678?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                                    alt="Inbox user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24">
+                    <div
+                        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div
+                            class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
+                            <div>
+                                <div>
+                                    <span
+                                        class="h-12 w-12 rounded-md flex items-center justify-center bg-gradient-to-r from-purple-600 to-indigo-600">
+                                        <!-- Heroicon name: outline/sparkles -->
+                                        <svg width="212" class="h-10 w-10" viewBox="0 0 212 512" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M211.075 222.041V209.912C211.075 200.021 203.056 192.002 193.165 192.002H181.622C199.429 179.172 211.074 158.163 211.074 134.446V61.853C211.074 51.962 203.055 43.943 193.164 43.943C183.273 43.943 175.254 51.962 175.254 61.853V104.838H148.52C150.565 96.869 151.645 88.612 151.645 80.221C151.645 56.74 143.251 33.973 128.009 16.11L119.626 6.286C116.221 2.297 111.242 0 106.001 0C100.759 0 95.779 2.297 92.376 6.284L83.993 16.11C68.751 33.971 60.358 56.74 60.358 80.221C60.358 88.613 61.437 96.869 63.483 104.838H36.748V61.853C36.748 51.962 28.729 43.943 18.838 43.943C8.94698 43.943 0.927979 51.962 0.927979 61.853V134.446C0.927979 158.162 12.572 179.172 30.381 192.002H18.838C8.94698 192.002 0.927979 200.021 0.927979 209.912V222.041C0.927979 246.304 13.254 267.732 31.954 280.36H18.839C8.94799 280.36 0.928986 288.379 0.928986 298.27V309.636C0.928986 332.771 11.9 353.354 28.839 366.33H18.839C8.94799 366.33 0.928986 374.349 0.928986 384.24V396.241C0.928986 435.053 32.35 466.628 70.973 466.628H88.093V494.091C88.093 503.982 96.112 512.001 106.003 512.001C115.894 512.001 123.913 503.982 123.913 494.091V466.628H141.034C179.656 466.628 211.077 435.053 211.077 396.241V384.24C211.077 374.349 203.058 366.33 193.167 366.33H183.167C200.107 353.355 211.077 332.772 211.077 309.636V298.27C211.077 288.379 203.058 280.36 193.167 280.36H180.052C198.748 267.731 211.075 246.304 211.075 222.041ZM66.57 140.659C73.639 140.659 80.465 142.844 86.187 146.796C86.365 146.991 86.53 147.194 86.709 147.386L88.088 148.874V169.316H70.968C54.179 169.316 40.186 156.93 37.3 140.659H66.57ZM88.089 430.807H70.969C54.091 430.807 40.029 418.406 37.246 402.15H66.571C74.441 402.15 82.011 404.855 88.089 409.699V430.807V430.807ZM88.089 344.837H70.969C54.272 344.837 40.329 332.474 37.339 316.18H66.571C74.441 316.18 82.011 318.884 88.089 323.729V344.837ZM88.089 256.479H70.969C54.057 256.479 39.97 244.068 37.228 227.822H66.571C74.441 227.822 82.011 230.526 88.089 235.371V256.479ZM105.999 114.001C99.61 103.975 96.177 92.308 96.177 80.222C96.177 68.216 99.621 56.501 105.999 46.46C112.377 56.502 115.821 68.216 115.821 80.222C115.822 92.307 112.387 103.973 105.999 114.001ZM123.91 148.875L125.29 147.386C125.469 147.193 125.635 146.991 125.812 146.796C131.534 142.843 138.36 140.659 145.429 140.659H174.698C171.812 156.93 157.819 169.316 141.031 169.316H123.91V148.875ZM123.91 323.731C129.988 318.887 137.56 316.181 145.429 316.181H174.66C171.67 332.475 157.728 344.838 141.031 344.838H123.91V323.731ZM141.031 430.807H123.91V409.7C129.988 404.856 137.56 402.15 145.429 402.15H174.753C171.969 418.406 157.907 430.807 141.031 430.807ZM141.031 256.479H123.91V235.372C129.988 230.528 137.56 227.822 145.429 227.822H174.771C172.029 244.069 157.943 256.479 141.031 256.479Z"
+                                                fill="white" />
+                                        </svg>
+
+                                    </span>
+                                </div>
+                                <div class="mt-6">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Animal feed
+                                        production</h2>
+                                    <p class="mt-4 text-lg text-gray-500">Production of quality feed from various
+                                        grains, as well as the production of additives to improve the health of farm
+                                        animals.
+                                        We cooperate with the largest Ukrainian agricultural enterprises and farms
+                                    </p>
+
+                                </div>
+                                <div class="mt-8 border-t border-gray-200 pt-6">
+                                    <blockquote>
+                                        <div>
+                                            <p class="text-base text-gray-500">&ldquo;In 2021, 100,000 tons of feed were
+                                                produced&rdquo;</p>
+                                        </div>
+                                        <footer class="mt-3">
+                                            <div class="flex items-center space-x-3">
+                                                <div class="flex-shrink-0">
+                                                    <img class="h-10 w-10 rounded-full" src="./img/soya.png" alt="">
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <img class="h-10 w-10 rounded-full" src="./img/sunflower.png"
+                                                        alt="">
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <img class="h-10 w-10 rounded-full" src="./img/rapeseed.png" alt="">
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <img class="h-10 w-10 rounded-full" src="./img/wheat.png" alt="">
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <img class="h-10 w-10 rounded-full" src="./img/corn.png" alt="">
+                                                </div>
+
+                                            </div>
+                                        </footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">
+                            <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://images.unsplash.com/photo-1638909555449-795569a5ae53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Customer profile user interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative mt-24">
+                    <div
+                        class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
+                        <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
+                            <div>
+                                <div>
+                                    <span
+                                        class="h-12 w-12 rounded-md flex items-center justify-center text-white bg-gradient-to-r from-blue-600 to-indigo-600">
+                                        <!-- Heroicon name: outline/inbox -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="mt-6">
+                                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Logistic</h2>
+                                    <p class="mt-4 text-lg text-gray-500">Experienced logisticians will quickly arrange
+                                        and agree on the logistics of the product to the desired point, quickly and
+                                        efficiently
+                                    </p>
+
+                                </div>
+                            </div>
+                            <div class="mt-8 border-t border-gray-200 pt-6">
+                                <blockquote>
+                                    <div>
+                                        <p class="text-base text-gray-500">&ldquo;In 2021, 5000 orders were
+                                            delivered&rdquo;</p>
+                                    </div>
+                                    <footer class="mt-3">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="flex-shrink-0 text-blue-600">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path
+                                                        d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
+                                                </svg>
+                                            </div>
+                                            <div class="flex-shrink-0 text-green-600">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="mt-12 sm:mt-16 lg:mt-0">
+                            <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                    src="https://images.unsplash.com/photo-1532635042-a6f6ad4745f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                    alt="Inbox user interface">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="mobile-menu hidden" id="mobile-menu">
-            <div class="pt-2 pb-3 space-y-1">
-                <!-- Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" -->
-                <a href="#"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-logocolor block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Projects</a>
-                <a href="#"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-logocolor block pl-3 pr-4 py-2 border-l-4 text-base font-medium">About</a>
-                <a href="#"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-logocolor block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Features</a>
-                <a href="#"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-logocolor block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Products</a>
-                <a href="#"
-                    class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-logocolor block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Team</a>
-            </div>
-        </div>
-
-        <script>
-            const btn = document.querySelector("button.mobile-menu-button");
-            const menu = document.querySelector(".mobile-menu");
-
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });
-        </script>
-    </nav>
-    <!-- Hero -->
-    <section class="flex">
-        <div class="mt-24 mr-10">
-            <div class="text-gray-500 ml-48 mb-4">
-                LLC "PROTEIN ENERGY"
-            </div>
-            <div class="text-6xl ml-48">LLC "PROTEIN ENERGY"</div>
-            <div class="ml-48 mt-6 text-lg">
-                Is trading and production company operating in the field <br /> of alternative energy and
-                agro-industrial
-                complex of Ukraine <br /> with a high-developed logistic complex. The basis of all the <br> goods
-                produced and
-                offered by the company are only organic <br> products that carry the highest value in the places of
-                their <br>
-                application in accordance with quality standards. <br /> The introduction of innovations and the
-                development of <br> digital solutions for the automatization of complex analogue <br> processes is one
-                of the
-                lines that single out us in a “playing field” <br> and gives a new level of industry development.
-            </div>
-        </div>
-        <div class="w-1/2 flex justify-end">
-            <img src="./img/truckssilos.jpg" class="rounded-b-xl shadow-lg" alt="">
-        </div>
-    </section>
-    <!-- About -->
-    <section class="mt-16">
-        <div class="flex justify-center">
-            <div class="mr-20 text-4xl">
-                PRINCIPLES, <br> MEANING AND <br> PHILOSOPHY <br> OF ACTIVITY
-            </div>
-            <div class="text-lg">
-                <p>
-                    1. &nbsp At the beginning of each process or communication, <br> we accumulate the absolute
-                    sincerity and
-                    transparency <br> of the contact.
-                    Our priority - is the highest result in favor <br> of counterparties who do business with us.
-                </p>
-                <br>
-                <p>
-                    2. &nbsp In each person with whom we build the future, <br>
-                    we see not just suppliers or customers, but PARTNERS. <br>
-                    Partnership is more than business, first of all, it is a relations.
-                </p>
-                <br>
-                <p>
-                    3. &nbsp For us, relations - are the basis for the success <br>
-                    of both parties in the long term and remain above <br>
-                    any commercial interests despite the fact that a positive <br>
-                    financial result is the goal and driving force for the business.
-                </p>
-            </div>
-        </div>
-        <div class="flex justify-center mt-12 pb-16">
-            <a href="#" class="flex-shrink-0 group block">
-                <div class="flex items-center">
-                    <div>
-                        <img class="inline-block h-16 w-16 rounded-full"
-                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+            <div class="relative bg-white">
+                <div class="lg:absolute lg:inset-0">
+                    <div class="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
+                        <img class="h-56 w-full object-cover lg:absolute lg:h-full rounded-lg shadow-lg"
+                            src="https://images.unsplash.com/photo-1631626234916-ec46864bde3f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
                             alt="">
                     </div>
-                    <div class="ml-3">
-                        <p class="text-xl font-semibold text-gray-700 group-hover:text-gray-900">Tom Cook</p>
-                        <p class="text-md font-medium text-gray-500 group-hover:text-gray-700">CEO</p>
+                </div>
+                <div
+                    class="relative pt-12 pb-16 px-4 sm:pt-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+                    <div class="lg:col-start-2 lg:pl-8">
+                        <div class="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                            <h2 class="leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Info</h2>
+                            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                                About us</h3>
+                            <div class="mt-5 prose prose-indigo text-gray-500">
+                                <p>
+                                    LLC “Protein Energy” is trading and production company operating in the field of
+                                    alternative energy and agro-industrial complex of Ukraine with a high-developed
+                                    logistic complex. The basis of all the goods produced and offered by the company are
+                                    only organic products that carry the highest value in the places of their
+                                    application in accordance with quality standards. The introduction of innovations
+                                    and the development of digital solutions for the automatization of complex analogue
+                                    processes is one of the lines that single out us in a “playing field” and gives a
+                                    new level of industry development.
+                                </p>
+                                <p class="mt-6 text-lg font-semibold">
+                                    PRINCIPLES, MEANING AND PHILOSOPHY OF ACTIVITY
+                                </p>
+                                <p class="mt-3">
+                                    At the beginning of each process or communication, we accumulate the absolute
+                                    sincerity and transparency of the contact. Our priority - is the highest result in
+                                    favor of counterparties who do business with us. In each person with whom we build
+                                    the future, we see not just suppliers or customers, but PARTNERS. Partnership is
+                                    more than business, first of all, it is a relations. For us, relations - are the
+                                    basis for the success of both parties in the long term and remain above any
+                                    commercial interests despite the fact that a positive financial result is the goal
+                                    and driving force for the business.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-        </div>
-    </section>
-    <!-- Photo  -->
-    <section>
-        <div>
-            <img src="./img/trucksonpurking.jpg" class="w-full" alt="">
-        </div>
-    </section>
-    <!-- Features -->
-    <section class="py-20">
-        <div class="text-5xl text-center pt-12">
-            Features
-        </div>
-        <div class="text-lg text-gray-600 text-center mt-6 pb-12">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
-            Aliquam nihil reiciendis ab placeat expedita optio, <br>
-            nemo voluptatibus labore. Rem dolorem, quo labore aperiam <br>
-            nostrum reprehenderit doloribus illo laborum minus sapiente.
-        </div>
-        <div class="flex justify-center ">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-36">
-                <div class="py-16 px-16 rounded-full bg-logocolor">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-gray-100" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                </div>
-                <div class="py-16 px-16 rounded-full bg-logocolor">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-gray-100" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                </div>
-                <div class="py-16 px-16 rounded-full bg-logocolor text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-gray-100" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                    </svg>
+            </div>
+            <!-- Logo Cloud -->
+            <div class="bg-gray-100 mt-24">
+                <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                    <p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">Companies of global importance that trust us</p>
+                    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                            <img class="h-20" src="./img/bayer.svg" alt="Bayer">
+                               
+                        </div>
+                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                            <img class="h-12" src="./img/bunge.svg" alt="Bunge">
+                                
+                        </div>
+                        <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                            <img class="h-12" src="./img/adm-logo.webp"
+                                alt="StaticKit">
+                        </div>
+                      
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Companies -->
-    <section>
-        <div class="bg-image flex items-center justify-between">
-            <div class="ml-48 mt-64 flex ">
-                <div>
-                    <p class="text-2xl">КОМПАНИИ МИРОВОГО ЗНАЧЕНИЯ</p>
-                    <p class="text-5xl ">КОТОРЫЕ НАМ <br> ДОВЕРЯЮТ</p>\
-                </div>
-            </div>
-            <div class="grid grid-cols-1">
-                <div class="flex justify-end mt-64  space-x-12 mr-48">
-                    <img src="./img/adm-logo.webp" class="h-16" alt="">
-                </div>
-                <div class="flex justify-end space-x-12 mt-8 mr-48">
-                    <img src="./img/bayer.svg" class="w-24 h-24" alt="">
-                    <img src="./img/bunge.svg" class="w-24 h-24" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials -->
-    <section>
-        <div class="bg-image-truck">
 
-        </div>
-    </section>
-    <!-- Products -->
-    <section>
-        <div class="text-center text-6xl text-gray-700 bg-logocolor py-24 bg-opacity-30">
-            Products
-        </div>
-        <div class="flex">
-            <div class="w-1/2 py-12 bg-bgprimary">
-                <p class="text-gray-700 text-center font-semibold text-5xl">PROTEIN</p>
+
+           
+        </main>
+
+        <footer class="bg-white">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
+              <div class="flex justify-center space-x-6 md:order-2">
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Facebook</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+          
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Instagram</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+          
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Twitter</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                  </svg>
+                </a>
+          
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">GitHub</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+          
+                <a href="#" class="text-gray-400 hover:text-gray-500">
+                  <span class="sr-only">Dribbble</span>
+                  <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" />
+                  </svg>
+                </a>
+              </div>
+              <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-center text-base text-gray-400">&copy; 2022 Protein&Energy, LLC. All rights reserved.</p>
+              </div>
             </div>
-            <div class="bg-bgsecondary w-1/2 py-12">
-                <p class="text-center text-white font-semibold text-5xl">ENERGY</p>
-            </div>
-        </div>
-    </section>
-    <!-- Gallery -->
-    <section>
-        <div class="bg-white mx-48 mt-20 text-gray-700 rounded-lg text-center text-6xl p-6 shadow-lg">
-            Gallery
-            <p class="text-gray-500 text-lg mt-4">
-                A lot of live photo
-            </p>
-        </div>
-        <div class="flex justify-center">
-        <div id="carouselExampleCaptions" class="carousel slide relative p-12" style="width: 70%;" data-bs-ride="carousel">
-            <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner relative w-full overflow-hidden">
-                <div class="carousel-item active relative float-left w-full">
-                    <img src="./img/tyrsahuman.jpg" class="block w-full rounded-xl"
-                        alt="..." />
-                    <div class="carousel-caption hidden md:block absolute text-center">
-                        <h5 class="text-xl">First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item relative float-left w-full">
-                    <img src="./img/traktor.jpg" class="block w-full rounded-xl"
-                        alt="..." />
-                    <div class="carousel-caption hidden md:block absolute text-center">
-                        <h5 class="text-xl">Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item relative float-left w-full">
-                    <img src="./img/woodleg.jpg" class="block w-full rounded-xl"
-                        alt="..." />
-                    <div class="carousel-caption hidden md:block absolute text-center">
-                        <h5 class="text-xl">Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
-                </div>
-            </div>
-            <button
-                class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-                class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-                type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+          </footer>
     </div>
-    </section>
-    <script src="https://unpkg.com/vue@3"></script>
     <script>
-        let isShow = false;
-    </script>
-    <style>
-        .bg-image {
-            background-image: url('./img/pole.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 80vh;
-        }
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
 
-        .bg-image-truck {
-            background-image: url('./img/truckwhite.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 70vh;
-        }
-    </style>
+        btn.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+        });
+    </script>
 </body>
 
 </html>
